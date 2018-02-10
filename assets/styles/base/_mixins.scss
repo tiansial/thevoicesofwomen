@@ -1,0 +1,16 @@
+@mixin underline($width: 0, $padding: 10px, $color: $color-yellow) {
+    position: relative;
+    padding-bottom: #{$padding};
+    
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: #{$width};
+        left: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        background-color: #{$color};
+        transition: width 0.6s;
+    }
+}

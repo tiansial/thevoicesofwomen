@@ -1,0 +1,27 @@
+//// Variables
+
+// Colors
+$color-yellow                       :#F7A700;
+$color-black                        :#17161A;
+$color-white                        :#ffffff;
+$color-anthracite                   : #3f494a;
+
+// z-index
+$below-content                      : 5;
+$content                            : 10;
+$above-content                      : 15;
+
+// Fonts
+
+$font-base-size                     : 16px;
+
+$font-base                          : 'Optima';
+$font-headings                      : 'Noe Display';
+$font-sans                          : 'Akzidenz-Grotesk Pro';
+
+// Grid
+
+$nogutter-grid: (
+  columns: 12,
+  gutter: 0px,
+);

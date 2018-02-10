@@ -1,0 +1,13 @@
+.contact {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.contact-form, .contact-content {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.contact-content {
+    padding: 2em;
+}

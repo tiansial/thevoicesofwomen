@@ -1,0 +1,48 @@
+footer {
+    h4 {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+
+    .footer-col {
+        text-align: center;
+        margin-bottom: 40px;
+
+        @include bpm() {
+            @include grid-column(4);
+            text-align: left;
+            margin-bottom: 0;
+        }
+
+        h5 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: white;
+            font-family: $font-base;
+        }
+
+        li {
+            padding: 5px 0;
+        }
+
+        input[type=email] {
+            background-color: transparent;
+            border: 1px solid rgba(white,0.2);
+        }
+    }
+
+    .copyright {
+        padding: 30px 0;
+        font-size: 14px;
+        text-align: center;
+        
+        a {
+            color: white;
+        }
+    }
+}

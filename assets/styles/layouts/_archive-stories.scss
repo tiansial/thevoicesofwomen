@@ -1,0 +1,46 @@
+.archive-stories {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 50px;
+        margin-bottom: 100px;
+
+        .content {
+            background-color: black;
+            padding: 2em;
+
+            h2 {
+                color: $color-yellow;
+                font-family: $font-headings;
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+
+            .excerpt {
+                line-height: 1.30em;
+
+                a {
+                    display:block;
+                    margin-top: 15px;
+                }
+            }
+        }
+
+
+    }
+
+    figure {
+        height: 300px;
+        
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+}

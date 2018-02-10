@@ -1,0 +1,206 @@
+.homepage--hero {
+    position: relative;
+    height: 90vh;
+
+    .homepage--hero__slide {
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 90vh;
+        }
+    }
+
+    .swiper-pagination {
+        bottom: 5%;
+        left: 5%;
+        width: inherit;
+    }
+
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: transparent;
+        border: 2px solid white;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: white;
+    }
+}
+
+.homepage--featured {
+    @include grid-container;
+
+    .homepage--featured__photo {
+        height: 300px;
+
+        @include bpm() {
+            width: 50%;
+            float: left;
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 300px;
+        }
+    }
+
+    .homepage--featured__content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 300px;
+        padding: 2em;
+        line-height: 1.5em;
+
+        @include bpm() {
+            width: 50%;
+            float: left;
+            padding: 2em 3em;
+        }
+
+        @include bpxl() {
+            padding: 2em 11em;
+        }
+
+        p {
+            margin-bottom: 30px;
+        } 
+    }
+}
+
+.homepage--stories {
+
+    .homepage--stories__each {
+        position: relative;
+        height: 400px;
+        transition: all .3s ease-in-out;
+        z-index: 99999;
+
+        img {
+            transition: all .6s ease-in-out;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            transition: all .3s ease-in-out;
+            background-color: rgba(black, 0.4);
+            opacity: 0;
+        }
+
+        &.siblingBlur::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            transition: all .3s ease-in-out;
+            background-color: rgba(black, 0.6);
+            opacity: 1;
+        }
+
+        &:hover {
+            z-index: 10;
+        }
+
+        &:hover .homepage--stories__content span {
+            @include underline(50px);
+        }
+
+        &:hover img {
+            transform: scale(1.2);
+            transition: all .6s ease-in-out;
+        }
+
+        @include bpm() {
+            @include grid-column(3, $nogutter-grid);
+            height: 350px;
+        }
+
+        &.swiper-slide-active {
+            .homepage--stories__content {
+               span {
+                   @include underline(50px);
+               } 
+           }
+
+           img {
+            transform: scale(1.2);
+            transition: all 2s ease-in-out;
+           }
+        }
+
+        a {
+            display: flex;
+        }
+
+        .homepage--stories__content {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            z-index: $above-content;
+
+            h2, h3 {
+                color: white;
+            }
+
+            h2 {
+                font-size: 2em;
+                font-weight: 700;
+            }
+
+            h3 {
+                font-family: $font-base;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-size: 1.2em;
+            }
+
+            span {
+                font-style: italic;
+                margin-top:100px;
+                @include underline();
+            }
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 400px;
+
+            @include bpm() {
+                height: 350px;
+            }
+        }
+    }
+}
+
+.homepage--moreStories {
+    
+    background-color: $color-yellow;
+    text-align: center;
+    font-family: $font-base;
+    font-size: 1.4em;
+    
+    a {
+        display: block;
+        padding: 2em 0.5em;
+        color: white;
+    }
+}

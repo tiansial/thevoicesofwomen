@@ -1,0 +1,41 @@
+@mixin bp-sm-ls () { /* smartphone-landscape */
+    @media screen and (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin bps() {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin bpm() {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin bpl() {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin bpxl() {
+    @media screen and (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin bpm-max() {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin bps-max() {
+    @media screen and (max-width: 475px) {
+        @content;
+    }
+}
