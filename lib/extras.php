@@ -73,3 +73,4 @@ function get_related_posts( $post_id, $related_count, $args = array() ) {
       return $related_args;
     }
 }
+
