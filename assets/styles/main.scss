@@ -1,8 +1,6 @@
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
-@import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "../../bower_components/normalize-scss/_normalize.scss";
-@import "../../bower_components/neat/core/_neat.scss";
 // endbower
 
 @import "site-settings";
@@ -13,6 +11,7 @@
 @import "base/base";
 @import "base/grid";
 @import "base/animation";
+@import "base/helpers";
 
 @import "shame";
 

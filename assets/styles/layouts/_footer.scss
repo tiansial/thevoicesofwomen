@@ -10,7 +10,6 @@ footer {
         margin-bottom: 40px;
 
         @include bpm() {
-            @include grid-column(4);
             text-align: left;
             margin-bottom: 0;
         }

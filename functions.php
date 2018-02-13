@@ -44,3 +44,5 @@ function hide_menu() {
 }
  
 add_action('admin_head', 'hide_menu');
+
+add_post_type_support( 'page', 'excerpt' );

@@ -5,8 +5,51 @@
     outline: none;
 }
 
+@-ms-viewport {
+    width: device-width;
+}
+
 html {
     min-height: 100%;
+    -ms-overflow-style: scrollbar;
+}
+
+/** =RENDERING **/
+html, body{
+  text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; font-smoothing: antialiased;
+  -moz-font-feature-settings:"smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+  -moz-font-feature-settings:"smcp=1, onum=1, frac=1, kern=1, liga=1, dlig=1, swsh=1";
+  -ms-font-feature-settings:"smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+  -o-font-feature-settings:"smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+  -webkit-font-feature-settings:"smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+  font-feature-settings:"smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+  font-feature-settings: "liga", "kern";
+}
+
+/* Chrome doesn't assume text rendering for form elements */
+input,
+textarea,
+select,
+button {
+  text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; font-smoothing: antialiased;
+  -moz-font-feature-settings:"smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+  -moz-font-feature-settings:"smcp=1, onum=1, frac=1, kern=1, liga=1, dlig=1, swsh=1";
+  -ms-font-feature-settings:"smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+  -o-font-feature-settings:"smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+  -webkit-font-feature-settings:"smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+  font-feature-settings:"smcp" 1, "onum" 1, "frac" 1, "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+}
+.text-subs,
+.sub, sub {
+  -moz-font-feature-settings:"subs" 1; -moz-font-feature-settings:"subs=1";
+  -ms-font-feature-settings:"subs" 1; -o-font-feature-settings:"subs" 1;
+  -webkit-font-feature-settings:"subs" 1; font-feature-settings:"subs" 1;
+}
+.text-sups,
+.sup, sup {
+  -moz-font-feature-settings:"sups" 1; -moz-font-feature-settings:"sups=1";
+  -ms-font-feature-settings:"sups" 1; -o-font-feature-settings:"sups" 1;
+  -webkit-font-feature-settings:"sups" 1; font-feature-settings:"sups" 1;
 }
 
 body {
@@ -149,10 +192,6 @@ figure {
 
 [data-clickbox] {
     cursor: pointer;
-}
-
-.clearfix {
-    @include clearfix();
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { /* IE antialiasing fix - https://gist.github.com/dalethedeveloper/1846552 */

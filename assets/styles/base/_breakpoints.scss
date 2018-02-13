@@ -17,13 +17,13 @@
 }
 
 @mixin bpl() {
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 992px) {
         @content;
     }
 }
 
 @mixin bpxl() {
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 1200px) {
         @content;
     }
 }

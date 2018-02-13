@@ -4,7 +4,10 @@
 $color-yellow                       :#F7A700;
 $color-black                        :#17161A;
 $color-white                        :#ffffff;
-$color-anthracite                   : #3f494a;
+$color-anthracite                   :#3f494a;
+
+// Box-shadows 
+$box-shadow-black                   : 0 4px 74px 0 rgba(0,0,0,.65);
 
 // z-index
 $below-content                      : 5;
@@ -15,13 +18,6 @@ $above-content                      : 15;
 
 $font-base-size                     : 16px;
 
-$font-base                          : 'Optima';
-$font-headings                      : 'Noe Display';
-$font-sans                          : 'Akzidenz-Grotesk Pro';
-
-// Grid
-
-$nogutter-grid: (
-  columns: 12,
-  gutter: 0px,
-);
+$font-base                          : "freight-text-pro";
+$font-headings                      : "canela-thin";
+$font-sans                          : "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;

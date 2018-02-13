@@ -74,18 +74,11 @@
       init: function() {
         var homeHero = new Swiper ('#homeHero', {
             loop: true,
-            effect: 'coverflow',
+            effect: 'fade',
             autoplay: 7000,
             centeredSlides: true,
             slidesPerView: 'auto',
-            pagination: '.swiper-pagination',
-            coferflow: {
-              rotate: 0,
-              stretch: 10,
-              depth: 200,
-              modifier: 3,
-              slideShadows: false
-            }
+            pagination: '.swiper-pagination'
         });
 
         var featuredStories = new Swiper('#featuredStories', {
