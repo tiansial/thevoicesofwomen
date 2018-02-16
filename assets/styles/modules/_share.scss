@@ -1,0 +1,23 @@
+.article-share {
+  margin: 100px 0;
+  text-align: center;
+
+  h6 {
+    font-size: 25px;
+    font-style: italic;
+    margin-bottom: 25px;
+    color: $color-yellow;
+  }
+
+  li {
+    display: inline;
+    margin: 0 20px;
+
+    a {
+      color: $color-white;
+      font-family: $font-sans;
+      font-weight: 700;
+      font-size: 13px;
+    }
+  }
+}

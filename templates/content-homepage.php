@@ -3,6 +3,7 @@
 $myStory = get_post(22); 
 $myStoryExcerpt = $myStory->post_excerpt;
 $myStoryUrl = get_permalink($myStory);
+$myStoryImage = get_the_post_thumbnail($myStory->ID, 'medium');
 ?>
 
 <section class="homepage--hero">
@@ -25,11 +26,11 @@ $myStoryUrl = get_permalink($myStory);
     <div class="container">
         <div class="row no-gutters">
             <div class="homepage--featured__photo col-xs-12 col-md-6">
-                <img src="<?= get_template_directory_uri(); ?>/dist/images/raquel.jpg" alt="My Story">
+                <?php echo $myStoryImage ?>
             </div>
             <div class="homepage--featured__content col-xs-12 col-md-6 align-center">
                 <p>
-                    <?php echo $myStoryExcerpt ?>
+                    <?php echo $myStoryExcerpt; ?>
                 </p>
                 <a href="<?php echo $myStoryUrl ?>"><?php _e('Read More', 'voicesofwomen') ?></a>
             </div>
@@ -51,7 +52,7 @@ $myStoryUrl = get_permalink($myStory);
                                 <?php if (get_field('location')) { ?>
                                     <h3><?php the_field('location') ?></h3>
                                 <?php } ?>
-                                <a href="<?php the_permalink(); ?>"><?php _e('Read More', 'voicesofwomen') ?></a>
+                                <a class="read-more underline-link" href="<?php the_permalink(); ?>"><?php _e('Read More', 'voicesofwomen') ?></a>
                             </div>
                         </div>
                     </div>

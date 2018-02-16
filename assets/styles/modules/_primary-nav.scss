@@ -1,32 +1,43 @@
 .primary-nav {
-    position: fixed;
-    z-index: 40;
-    top:0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    background-color: $color-black;
-    display: none;
+  position: relative;
+  z-index: 40;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background-color: $color-black;
+  display: none;
 
-    @include bpl() {
-        display: block;
+  @include bpl() {
+    display: block;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .logo {
+    margin-right: auto;
+    padding: 0;
+
+    svg {
+      display: block;
     }
+  }
 
-    .wrapper {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    a {
+  .menu {
+    li {
+      display: inline;
+      a {
         color: white;
-        font-size:18px;
-        padding: 0 15px;
-
-        &:first-child {
-            margin-right: auto;
-            padding: 0;
-        }
+        margin-left: 15px;
+        font-family: $font-sans;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
     }
+  }
 }

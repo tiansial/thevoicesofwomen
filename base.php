@@ -28,11 +28,7 @@ use Roots\Sage\Wrapper;
     ?>
     <div class="mobile-navigation">
         <span class="mobile-nav__toggle"><?php _e('CLOSE', 'voicesofwomen'); ?></span>
-        <div>
-          <a href="/stories">Stories</a>
-          <a href="#">Events</a>
-          <a href="/get-involved">Get Involved</a>
-        </div>
+        <?php wp_nav_menu( array( 'theme_location' => 'primary-navigation' ) ); ?>
     </div>
   </body>
 </html>

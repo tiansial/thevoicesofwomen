@@ -1,16 +1,38 @@
-@mixin underline($width: 0, $padding: 10px, $color: $color-yellow) {
-    position: relative;
-    padding-bottom: #{$padding};
-    
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        width: #{$width};
-        left: 50%;
-        transform: translateX(-50%);
-        height: 1px;
-        background-color: #{$color};
-        transition: width 0.6s;
+@mixin underline-link($width: 40%, $padding: 5px, $color: $color-yellow) {
+  position: relative;
+  padding-bottom: #{$padding};
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: #{$width};
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    background-color: #{$color};
+    transition: width 0.25s ease-in;
+  }
+
+  &:hover {
+    transition: width 0.25s ease-in;
+
+    &::after {
+      width: 80%;
     }
+  }
+}
+
+@mixin button($color) {
+  background-color: $color;
+  padding: 15px 40px;
+  color: white;
+  transition: all 0.3s;
+  font-family: $font-sans;
+  font-weight: 700;
+
+  &:hover {
+    background-color: lighten($color, 8);
+    transition: all 0.3s;
+  }
 }
