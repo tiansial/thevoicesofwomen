@@ -1,6 +1,6 @@
 <?php
 
-$myStory = get_post(22); 
+$myStory = get_post(75); 
 $myStoryExcerpt = $myStory->post_excerpt;
 $myStoryUrl = get_permalink($myStory);
 $myStoryImage = get_the_post_thumbnail($myStory->ID, 'medium');
@@ -38,10 +38,11 @@ $myStoryImage = get_the_post_thumbnail($myStory->ID, 'medium');
     </div>
 </section>
 <section class="homepage--stories">
+    <h1>Stories</h1>
     <div class="container">
         <div class="row">
             <?php
-            $loop = new WP_Query( array( 'post_type' => 'stories', 'posts_per_page=3' ) );
+            $loop = new WP_Query( array( 'post_type' => 'stories', 'posts_per_page' => 3, 'post__not_in' => array(75), ) );
             if ( $loop->have_posts() ) :
                 while ( $loop->have_posts() ) : $loop->the_post(); ?>
                     <div class="col-xs-12 col-md-4">

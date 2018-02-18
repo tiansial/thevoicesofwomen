@@ -86,6 +86,7 @@ body {
   -webkit-touch-callout: none; /* disables the default callout shown when you touch and hold a touch target */
   -webkit-overflow-scrolling: touch; /* controls whether or not touch devices use momentum-based scrolling for the given element */
   -webkit-text-size-adjust: none;
+  transition: all 0.3s ease;
 
   padding-top: 80px;
   @include bpm() {
@@ -188,14 +189,6 @@ figure {
   @include bpxl() {
     width: 40%;
   }
-}
-
-.wrap {
-  position: relative;
-  z-index: 30;
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 80px 15px;
 }
 
 .p-100 {
