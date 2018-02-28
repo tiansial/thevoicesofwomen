@@ -5,8 +5,9 @@ footer {
 
     svg {
       margin-bottom: 20px;
+      opacity: 0.6;
       g {
-         fill: white;
+         fill: $color-yellow;
       }
     }
 
@@ -29,6 +30,7 @@ footer {
       font-size: 18px;
       font-weight: 100;
       margin-bottom: 15px;
+      color: $color-yellow;
     }
 
     a {
