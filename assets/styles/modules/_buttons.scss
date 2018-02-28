@@ -1,3 +1,42 @@
 .underline-link {
   @include underline-link();
 }
+
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  font-family: $font-sans;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transition: all 0.6s ease;
+  }
+
+  &.btn-yellow {
+    background-color: $color-yellow;
+    color: white;
+    
+    &:hover {
+      background-color: darken($color-yellow, 10%);
+      transform: translateY(-2px);
+      transition: all 0.6s ease;
+    }
+  }
+
+  &.btn-brown {
+    background-color: darken($color-brown, 4%);
+    color: $color-yellow;
+    
+    &:hover {
+      background-color: darken($color-yellow, 10%);
+      transform: translateY(-2px);
+      transition: all 0.6s ease;
+      color: white;
+    }
+  }
+}

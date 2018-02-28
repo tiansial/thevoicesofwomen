@@ -65,5 +65,5 @@ $myStoryImage = get_the_post_thumbnail($myStory->ID, 'medium');
     </div>
 </section>
 <section class="homepage--moreStories">
-    <a href="#"><?php _e('Show more stories.', 'voicesofwomen') ?></a>
+    <a href="<?php echo get_post_type_archive_link( 'stories' ); ?>"><?php _e('Show more stories.', 'thevoicesofwomen') ?></a>
 </section>

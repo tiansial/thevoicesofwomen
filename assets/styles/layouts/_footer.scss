@@ -1,8 +1,19 @@
 footer {
-  h4 {
+  .footer-logo {
+    margin: 70px 0;
     text-align: center;
-    font-size: 18px;
-    margin-bottom: 50px;
+
+    svg {
+      margin-bottom: 20px;
+      g {
+         fill: white;
+      }
+    }
+
+    h4 {
+      font-size: 18px;
+      font-weight: 100;
+    }
   }
 
   .footer-col {
@@ -16,7 +27,7 @@ footer {
 
     h5 {
       font-size: 18px;
-      font-weight: bold;
+      font-weight: 100;
       margin-bottom: 15px;
     }
 
@@ -33,6 +44,17 @@ footer {
     input[type="email"] {
       background-color: transparent;
       border: 1px solid rgba(white, 0.2);
+    }
+  }
+
+  .terms {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    li {
+      display: inline;
+      margin: 0 15px;
     }
   }
 

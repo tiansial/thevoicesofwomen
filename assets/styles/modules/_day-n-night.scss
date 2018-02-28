@@ -64,9 +64,23 @@ body.day {
     article img {
       box-shadow: $box-shadow-white;
     }
+
+    .singleStory--title .vert-line {
+      background-color: black;
+    }
+
+    .related #relatedStories .related__thumbnail.swiper-slide-active {
+      box-shadow: $box-shadow-white;
+    }
   }
 
   footer .footer-col a {
     color: $color-black;
+  }
+
+  .article-share {
+    svg path {
+      fill: $color-black;
+    }
   }
 }

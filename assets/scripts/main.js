@@ -94,8 +94,9 @@
         var relatedSwiper = new Swiper("#relatedStories", {
           loop: true,
           effect: "coverflow",
-          // preventClicks: false,
-          // preventClicksPropagation: false,
+          preventClicks: false,
+          preventClicksPropagation: false,
+          speed: 800,
           grabCursor: true,
           centeredSlides: true,
           slidesPerView: "auto",
@@ -103,15 +104,28 @@
           nextButton: ".button-next",
           coverflow: {
             rotate: 0,
-            stretch: 10,
+            stretch: 0,
             depth: 200,
-            modifier: 3,
-            slideShadows: false
+            modifier: 1,
+            slideShadows: true
           }
         });
 
         $(".day-n-night").click(function() {
           $("body").toggleClass("day");
+        });
+      }
+    },
+    post_type_archive_stories: {
+      init: function() {
+        $(".post-type-archive-stories figure").hover(function() {
+            $(".post-type-archive-stories figure").not(this).parent('.card').each(function(){
+              $(this).addClass("fadeOut");
+            });
+        }, function() {
+            $(".post-type-archive-stories figure").not(this).parent('.card').each(function(){
+              $(this).removeClass("fadeOut");
+            });
         });
       }
     }

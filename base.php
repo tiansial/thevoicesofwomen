@@ -28,7 +28,7 @@ use Roots\Sage\Wrapper;
     ?>
     <div class="mobile-navigation">
         <span class="mobile-nav__toggle"><?php _e('CLOSE', 'voicesofwomen'); ?></span>
-        <?php wp_nav_menu( array( 'theme_location' => 'primary-navigation' ) ); ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'primary_navigation' ) ); ?>
     </div>
   </body>
 </html>

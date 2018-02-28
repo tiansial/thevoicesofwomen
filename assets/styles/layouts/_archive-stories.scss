@@ -1,46 +1,94 @@
-.archive-stories {
-    display: flex;
-    flex-wrap: wrap;
+.post-type-archive-stories {
+    .page-title {
+        text-align: center;
+        color: $color-yellow;
+        margin-bottom: 100px;
+        font-size: 5em;
+    }
 
     .card {
-        flex: 0 0 50%;
-        max-width: 50%;
-        padding: 0 50px;
-        margin-bottom: 100px;
+        padding: 0 10px;
+        margin-bottom: 50px;
 
         .content {
-            background-color: black;
-            padding: 2em;
+            padding: 1.5em 0;
+            transition: opacity 0.6s ease;
 
             h2 {
                 color: $color-yellow;
                 font-family: $font-headings;
                 font-size: 30px;
-                margin-bottom: 20px;
             }
 
-            .excerpt {
-                line-height: 1.30em;
-
-                a {
-                    display:block;
-                    margin-top: 15px;
-                }
+            h3 {
+                font-family: $font-sans;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                //font-weight: 700;
             }
         }
 
+        &.fadeOut {
+            figure {
+                &:after {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: all 0.6s ease;
+                }
 
+                img {
+                    filter: blur(5px);
+                    transform: scale(1.03);
+                    transition: filter 0.3s ease, transform 0.6s ease;
+                }
+            }
+
+            .content {
+                opacity: 0.3;
+                transition: opacity 0.6s ease;
+            }
+        }
     }
 
     figure {
+        position: relative;
         height: 300px;
+        transition: all 0.6s ease;
+        overflow: hidden;
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left:0;
+            top: 0;
+            visibility: hidden;
+            opacity: 0;
+            background-color: rgba(black, 0.7);
+            transition: all 0.6s ease;
+        }
+
+        &:hover {
+            transform: translateY(-10px);
+            transition: all 0.6s ease;
+            box-shadow: $box-shadow-black;
+        }
+
         
 
+        a {
+            display: block;
+        }
+        
         img {
+            display: block;
             max-width: 100%;
             width: 100%;
             height: 300px;
             object-fit: cover;
+            transition: filter 0.3s ease, transform 0.6s ease;
         }
     }
 }

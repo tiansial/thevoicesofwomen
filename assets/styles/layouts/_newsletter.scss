@@ -1,0 +1,55 @@
+#mc_embed_signup {
+  #mc-embedded-subscribe-form {
+    text-align: center;
+
+    .indicates-required {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: $font-sans;
+      font-size: 11px;
+      opacity: 0.5;
+      margin-bottom: 20px;
+    }
+
+    .newsletter-input {
+      border: 1px solid rgba(white, 0.5);
+      background-color: transparent;
+      margin-bottom: 15px;
+      padding: 0 15px;
+      text-align: center;
+      max-width: 100%;
+      width: 300px;
+      font-family: $font-headings;
+      font-weight: 100;
+      transition: all 0.6s ease;
+      line-height: 48px;
+      color: white;
+
+      &::placeholder {
+        text-align: center;
+      }
+
+      &:focus {
+        border: 1px solid $color-yellow;
+        transition: all 0.6s ease;
+      }
+    }
+
+    #mc-embedded-subscribe {
+      width: 300px;
+      line-height: 48px;
+    }
+  }
+
+  .terms {
+      max-width: 100%;
+      width: 300px;
+      display: block;
+      margin: 0 auto;
+      margin-top: 20px;
+      font-size: 13px;
+      text-align: center;
+      opacity: 0.8;
+    }
+}
+

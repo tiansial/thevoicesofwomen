@@ -1,8 +1,6 @@
 .article-content {
   margin: 0 auto;
   width: 100%;
-  margin-bottom: 150px;
-  margin-top: 50px;
 
   @include bp-sm-ls() {
     padding: 0 80px;
@@ -11,11 +9,11 @@
 
   @include bpm() {
     padding: 0;
-    max-width: 750px;
+    max-width: 560px;
   }
 
-  @include bpxl() {
-    max-width: 800px;
+  @include bpl() {
+    max-width: 620px;
   }
 
   header {
@@ -37,7 +35,7 @@
   h6 {
     margin-top: 60px;
     margin-bottom: 15px;
-    font-weight: 300;
+    font-weight: 100;
     color: $color-yellow;
     font-size: 40px;
 
@@ -46,14 +44,19 @@
     }
   }
 
-  p {
+  p, li {
     font-size: 16px;
     line-height: 28px;
     margin: 0 0 40px 0;
 
     @include bp-sm-ls() {
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    @include bpl() {
       font-size: 20px;
-      line-height: 36px;
+      line-height: 33px;
     }
   }
 
@@ -63,6 +66,7 @@
 
     li {
       list-style-type: disc;
+      margin-bottom: 15px;
     }
   }
 
@@ -72,12 +76,14 @@
     max-width: 500px;
     margin: 0 auto;
     margin-top: 50px;
-    font-size: 30px;
     font-family: $font-headings;
     padding: 50px 30px 30px 30px;
     line-height: normal;
     font-style: italic;
-    font-weight: bold;
+
+    p {
+      font-size: 30px;
+    }
   }
 
   figure {
@@ -104,7 +110,6 @@
 
   h6 {
     font-size: 25px;
-    font-style: italic;
     margin-bottom: 25px;
     color: $color-yellow;
   }
