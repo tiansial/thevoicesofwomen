@@ -2,8 +2,10 @@
 
 // Colors
 $color-yellow:              #f7a700;
+$color-dark-yellow:         darken($color-yellow, 10%);
 $color-black:               #17161a;
 $color-brown:               #262020;
+$color-dark-brown:          darken($color-brown, 4%);
 $color-white:               #ffffff;
 $color-anthracite:          #3f494a;
 

@@ -22,18 +22,18 @@
     color: white;
     
     &:hover {
-      background-color: darken($color-yellow, 10%);
+      background-color: $color-dark-yellow;
       transform: translateY(-2px);
       transition: all 0.6s ease;
     }
   }
 
   &.btn-brown {
-    background-color: darken($color-brown, 4%);
+    background-color: $color-dark-brown;
     color: $color-yellow;
     
     &:hover {
-      background-color: darken($color-yellow, 10%);
+      background-color: $color-dark-yellow;
       transform: translateY(-2px);
       transition: all 0.6s ease;
       color: white;
