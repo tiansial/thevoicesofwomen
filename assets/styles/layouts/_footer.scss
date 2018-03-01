@@ -1,6 +1,6 @@
 footer {
   .footer-logo {
-    margin: 70px 0;
+    margin: 50px 0;
     text-align: center;
 
     svg {
@@ -29,7 +29,7 @@ footer {
     h5 {
       font-size: 18px;
       font-weight: 100;
-      margin-bottom: 15px;
+      margin-bottom: 5px;
       color: $color-yellow;
     }
 
@@ -40,18 +40,12 @@ footer {
     }
 
     li {
-      padding: 5px 0;
-    }
-
-    input[type="email"] {
-      background-color: transparent;
-      border: 1px solid rgba(white, 0.2);
+          padding: 3px 0;
     }
   }
 
   .terms {
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 30px;
     text-align: center;
 
     li {
@@ -61,7 +55,7 @@ footer {
   }
 
   .copyright {
-    padding: 30px 0;
+    margin: 30px 0;
     font-size: 14px;
     text-align: center;
 

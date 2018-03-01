@@ -1,0 +1,32 @@
+.next-events {
+  text-align: center;
+
+  h2 {  
+    font-size: 30px;
+    color: $color-yellow;
+    margin-bottom: 30px;
+  }
+
+  .next-event {
+    padding: 30px 50px;
+    margin-bottom: 25px;
+    display: inline-block;
+    background-color: $color-dark-brown;
+    color: $color-white;
+    transition: all .2s ease-out;
+
+    &:hover {
+      transform: translate3d(0,-5px,0);
+      transition: all .2s ease-out;
+      box-shadow: 0 20px 25px 0 rgba(0,0,0,.15);
+    }
+    
+    p {
+      font-size: 18px;
+      color: $color-yellow;
+      font-family: $font-headings;
+      font-weight: 100;
+      margin-bottom: 10px;
+    }
+  }
+}

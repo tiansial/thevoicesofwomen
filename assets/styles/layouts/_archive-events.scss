@@ -1,10 +1,4 @@
 .page-template-template-events {
-  .page-title {
-      text-align: center;
-      color: $color-yellow;
-      margin-bottom: 70px;
-      font-size: 5em;
-  }
 
   .events-list {
     
@@ -14,6 +8,7 @@
   }
 
   .event {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -21,6 +16,18 @@
     background-color: $color-dark-brown;
     cursor: pointer;
     transition: all .2s ease-out;
+
+    .event-click {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      cursor: pointer;
+    }
 
     &:hover {
       transform: translate3d(0,-5px,0);

@@ -128,6 +128,17 @@
             });
         });
       }
+    },
+    events: {
+      init: function() {
+        $(document).on("click", ".event-click", function() {
+            event.preventDefault();
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+            var eventUrl = $(this).parent().attr("data-url");
+            document.location = eventUrl;
+        });
+      }
     }
   };
 

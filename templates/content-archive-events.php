@@ -12,7 +12,8 @@
       if ( $the_query->have_posts() ) {
         while ( $the_query->have_posts() ) {
           $the_query->the_post();?>
-            <div class="event" data-url="<?php the_permalink() ?>">
+            <div class="event slideUp" data-url="<?php the_permalink() ?>">
+              <div class="event-click"></div>
               <div class="event-content">
                 <h2><?php the_title(); ?></h2>
                 <p><?php echo wp_trim_words( get_the_content(), 20, '...' ); ?></p>
