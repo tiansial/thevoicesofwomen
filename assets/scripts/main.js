@@ -82,6 +82,7 @@
           centeredSlides: true,
           slidesPerView: "auto",
           pagination: ".swiper-pagination"
+          
         });
       },
       finalize: function() {
@@ -108,11 +109,10 @@
             depth: 200,
             modifier: 1,
             slideShadows: true
+          },
+          keyboard: {
+            enabled: true
           }
-        });
-
-        $(".day-n-night").click(function() {
-          $("body").toggleClass("day");
         });
       }
     },

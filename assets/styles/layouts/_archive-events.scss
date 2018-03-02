@@ -5,6 +5,10 @@
     @include bpm() {
       margin: 0 50px;
     }
+
+    @include bpl() {
+      margin: 0 120px;
+    }
   }
 
   .event {
@@ -74,8 +78,8 @@
         width: 100%;
 
         @include bpm() {
-          display: inline;
-          margin-bottom: 0px;
+          //display: inline;
+          //margin-bottom: 0px;
         }
 
         span, p {
