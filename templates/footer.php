@@ -52,7 +52,7 @@
         <div class="terms">
             <ul>
                 <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Use</a></li>
+                <li><a href="<?php echo get_permalink(115); ?>">Terms of Use</a></li>
             </ul>
         </div>
     </div>

@@ -29,6 +29,17 @@
   }
 }
 
+@keyframes slideLeft {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 @keyframes vertline {
   0% {
     opacity: 0;

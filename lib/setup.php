@@ -29,7 +29,7 @@ function setup() {
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
-    'primary_navigation' => __('Primary Navigation', 'sage'),
+    'mobile-menu' => __('Mobile Menu', 'sage'),
     'desktop-left-menu' => __('Desktop Left Menu', 'sage'),
     'desktop-right-menu' => __('Desktop Right Menu', 'sage'),
   ]);

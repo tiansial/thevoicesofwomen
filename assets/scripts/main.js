@@ -18,12 +18,52 @@
     common: {
       init: function() {
         // Hide .mobile-nav on on scroll down
+        var _body = document.querySelector('body'),
+            mobileMenuToggle = document.querySelector('.mobile-nav__toggle'),
+            mobileMenu = document.querySelector('.mobile-navigation'),
+            globalWrapper = document.querySelector('.global-wrapper');
 
-        $(".mobile-nav__toggle").on("click", function(e) {
-          $(".mobile-nav__toggle").toggleClass("open");
-          $(".mobile-navigation").toggleClass("open"); //you can list several class names
-          e.preventDefault();
-        });
+        function OnTransitionEnd() {
+          mobileMenu.classList.remove("menu--animatable");
+        }
+
+        function toggleClassMenu() {
+          mobileMenu.classList.add("menu--animatable");
+          if(!mobileMenu.classList.contains("menu--visible")) {
+            mobileMenu.classList.add("menu--visible");
+          } else {
+            mobileMenu.classList.remove('menu--visible');
+          }
+
+          if(!mobileMenuToggle.classList.contains("menu--visible")) {
+            mobileMenuToggle.classList.add("menu--visible");
+          } else {
+            mobileMenuToggle.classList.remove('menu--visible');
+          }
+
+          if(!_body.classList.contains("menu--visible")) {
+            _body.classList.add("menu--visible");
+          } else {
+            _body.classList.remove('menu--visible');
+          }
+
+          if(!_body.classList.contains("of-hidden")) {
+            _body.classList.add("of-hidden");
+          } else {
+            _body.classList.remove('of-hidden');
+          }
+        }
+
+        
+
+        mobileMenu.addEventListener("transitionend", OnTransitionEnd, false);
+        mobileMenuToggle.addEventListener("click", toggleClassMenu, false);
+        mobileMenu.addEventListener("click", toggleClassMenu, false);
+        mobileMenu.addEventListener('touchmove', function(e) {
+
+                e.preventDefault();
+
+        }, false);
 
         var didScroll;
         var lastScrollTop = 0;

@@ -1,5 +1,9 @@
 .next-events {
   text-align: center;
+  max-width: 100%;
+  width: 500px;
+  display: block;
+  margin: 0 auto;
 
   h2 {  
     font-size: 30px;
@@ -10,7 +14,7 @@
   .next-event {
     padding: 30px 50px;
     margin-bottom: 25px;
-    display: inline-block;
+    display: block;
     background-color: $color-dark-brown;
     color: $color-white;
     transition: all .2s ease-out;

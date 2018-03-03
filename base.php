@@ -18,17 +18,15 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
-    <main class="main" role="document">
-      <?php include Wrapper\template_path(); ?>
-    </main><!-- /.main -->
-    <?php
-      do_action('get_footer');
-      get_template_part('templates/footer');
-      wp_footer();
-    ?>
-    <div class="mobile-navigation">
-        <span class="mobile-nav__toggle"><?php _e('CLOSE', 'voicesofwomen'); ?></span>
-        <?php wp_nav_menu( array( 'theme_location' => 'primary_navigation' ) ); ?>
+    <div class="global-wrapper">
+      <main class="main" role="document">
+        <?php include Wrapper\template_path(); ?>
+      </main><!-- /.main -->
+      <?php
+        do_action('get_footer');
+        get_template_part('templates/footer');
+        wp_footer();
+      ?>
     </div>
   </body>
 </html>
