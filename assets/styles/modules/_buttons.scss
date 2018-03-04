@@ -12,9 +12,12 @@
   font-size: 12px;
   font-weight: 700;
   transition: all 0.3s ease;
+  color: white;
+  display: inline-block;
 
   &:hover {
-    transition: all 0.6s ease;
+    transition: all 0.3s ease;
+    transform: translateY(-2px);
   }
 
   &.btn-yellow {
@@ -23,8 +26,15 @@
     
     &:hover {
       background-color: $color-dark-yellow;
-      transform: translateY(-2px);
-      transition: all 0.6s ease;
+    }
+  }
+
+  &.btn-light-brown {
+    background-color: $color-brown;
+
+    &:hover {
+      background-color: $color-yellow;
+      color: white;
     }
   }
 
@@ -34,8 +44,6 @@
     
     &:hover {
       background-color: $color-dark-yellow;
-      transform: translateY(-2px);
-      transition: all 0.6s ease;
       color: white;
     }
   }

@@ -76,13 +76,15 @@
     margin: 0 auto;
     margin-top: 30px;
     font-family: $font-headings;
-    padding: 50px 30px 30px 30px;
+    padding: 50px 30px;
     line-height: normal;
     font-style: italic;
     color: $color-yellow;
+    margin-bottom: 40px;
 
-    p {
+    p,h1,h2,h3,h4,h5,h6 {
       font-size: 30px;
+      margin: 0;
     }
   }
 

@@ -29,10 +29,13 @@ $myStoryImage = get_the_post_thumbnail($myStory->ID, 'medium');
                 <?php echo $myStoryImage ?>
             </div>
             <div class="homepage--featured__content col-xs-12 col-md-6 align-center">
-                <p>
-                    <?php echo $myStoryExcerpt; ?>
-                </p>
-                <a href="<?php echo $myStoryUrl ?>"><?php _e('Read More', 'voicesofwomen') ?></a>
+                <div class="wrapper">
+                    <h2><?php echo get_the_title($myStory); ?></h2>
+                    <p>
+                        <?php echo $myStoryExcerpt; ?>
+                    </p>
+                    <a class="btn btn-light-brown" href="<?php echo $myStoryUrl ?>"><?php _e('Read More', 'voicesofwomen') ?></a>
+                </div>
             </div>
         </div>
     </div>
@@ -47,13 +50,17 @@ $myStoryImage = get_the_post_thumbnail($myStory->ID, 'medium');
                 while ( $loop->have_posts() ) : $loop->the_post(); ?>
                     <div class="col-xs-12 col-md-4">
                         <div class="homepage--stories__each">
-                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                            <a class="homepageStory-link" href="<?php the_permalink(); ?>">
+                                <div class="blur-overlay">
+                                    <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                                </div>
+                            </a>
                             <div class="homepage--stories__content">
                                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                 <?php if (get_field('location')) { ?>
                                     <h3><?php the_field('location') ?></h3>
                                 <?php } ?>
-                                <a class="read-more underline-link" href="<?php the_permalink(); ?>"><?php _e('Read More', 'voicesofwomen') ?></a>
+                                <a class="btn btn-brown" href="<?php the_permalink(); ?>"><?php _e('Read More', 'voicesofwomen') ?></a>
                             </div>
                         </div>
                     </div>
@@ -65,5 +72,5 @@ $myStoryImage = get_the_post_thumbnail($myStory->ID, 'medium');
     </div>
 </section>
 <section class="homepage--moreStories">
-    <a href="<?php echo get_post_type_archive_link( 'stories' ); ?>"><?php _e('Show more stories.', 'thevoicesofwomen') ?></a>
+    <a class="btn btn-yellow" href="<?php echo get_post_type_archive_link( 'stories' ); ?>"><?php _e('All Stories.', 'thevoicesofwomen') ?></a>
 </section>

@@ -122,7 +122,18 @@
           centeredSlides: true,
           slidesPerView: "auto",
           pagination: ".swiper-pagination"
-          
+        });
+
+        $(".homepage--stories__each").hover(function() {
+            $(this).addClass("hover");
+            $(".homepage--stories__each").not(this).each(function(){
+              $(this).addClass("fadeOut");
+            });
+        }, function() {
+            $(this).removeClass("hover");
+            $(".homepage--stories__each").not(this).each(function(){
+              $(this).removeClass("fadeOut");
+            });
         });
       },
       finalize: function() {
