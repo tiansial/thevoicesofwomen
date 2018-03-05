@@ -14,7 +14,7 @@ $order = array();
 
 // populate order
 foreach( $sliderPosts as $i ) {
-    $order[] = $i['post'][0];
+    $order[] = $i['post'];
 }
 
 $the_query = new WP_Query( array(
