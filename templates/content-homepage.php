@@ -7,10 +7,20 @@ $myStoryUrl = get_permalink($myStory);
 $myStoryImage = get_the_post_thumbnail($myStory->ID, 'medium');
 
 // Slider Posts
+$sliderPosts = get_field('content');
+
+// vars
+$order = array();
+
+// populate order
+foreach( $sliderPosts as $i ) {
+    $order[] = $i['post'][0];
+}
 
 $the_query = new WP_Query( array(
     'post_type' => array('any'),
-    'post__in' => array( 91, 27, 48)
+    'post__in' => $order,
+    'orderby' => 'post__in'
 ) );
 ?>
 
