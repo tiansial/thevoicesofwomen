@@ -6,7 +6,13 @@
   <div class="events-list">
     <?php
       // The Query
-      $the_query = new WP_Query( array( 'post_type' => 'events' ) );
+      $the_query = new WP_Query(array(
+          'post_type'         => 'events',
+          'order'             => 'ASC',
+          'orderby'           => 'meta_value',
+          'meta_key'          => 'day',
+          'meta_type'         => 'DATETIME'
+      ));
 
       // The Loop
       if ( $the_query->have_posts() ) {

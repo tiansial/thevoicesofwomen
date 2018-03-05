@@ -1,0 +1,36 @@
+.scroll-line {
+  height: 30px;
+  width: 1px;
+  background: $color-yellow;
+  position: absolute;
+  z-index: $above-content;
+  bottom: -12px;
+  display: block;
+  overflow: hidden;
+  left: 50%;
+  transform: scaleY(1), translateX(-50%);
+
+  @include bpm() {
+    height: 40px;
+    bottom: -12px;
+  }
+
+  &::after {
+    content: '';
+    width: inherit;
+    height: 50%;
+    background: #fff;
+    position: absolute;
+    transform: translateY(0%) scaleY(0);
+    left: 0;
+    z-index: 10;
+    display: block;
+  }
+
+  &.init {
+    &::after {
+      animation: scroll-line 1.5s infinite linear;
+      transform-origin: top center;
+    }
+  }
+}

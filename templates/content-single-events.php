@@ -66,7 +66,7 @@
                 <?php foreach( $posts as $p ): ?>
                     <a href="<?php the_permalink($p->ID); ?>" class="next-event">
                         <p><?php echo $p->post_title; ?></p>
-                        <span><?php the_field('day') ?></span>
+                        <span><?php the_field('day', $p->ID) ?></span>
                     </a>   
                 <?php endforeach; ?>
             </ul>

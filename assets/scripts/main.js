@@ -54,15 +54,11 @@
           }
         }
 
-        
-
         mobileMenu.addEventListener("transitionend", OnTransitionEnd, false);
         mobileMenuToggle.addEventListener("click", toggleClassMenu, false);
         mobileMenu.addEventListener("click", toggleClassMenu, false);
         mobileMenu.addEventListener('touchmove', function(e) {
-
-                e.preventDefault();
-
+          e.preventDefault();
         }, false);
 
         var didScroll;
@@ -84,13 +80,15 @@
             // Scroll Down
             $(".mobile-nav")
               .removeClass("nav-down")
-              .addClass("nav-up");
+              .addClass("nav-up")
+              .css('top', -navbarHeight);
           } else {
             // Scroll Up
             if (st + $(window).height() < $(document).height()) {
               $(".mobile-nav")
                 .removeClass("nav-up")
-                .addClass("nav-down");
+                .addClass("nav-down")
+                .css('top', '0');
             }
           }
 
@@ -118,11 +116,37 @@
         var homeHero = new Swiper("#homeHero", {
           loop: true,
           effect: "fade",
-          autoplay: 7000,
+          autoplay: {
+             delay: 8000,
+             disableOnInteraction: false
+           },
           centeredSlides: true,
           slidesPerView: "auto",
-          pagination: ".swiper-pagination"
+          watchSlidesProgress: true,
+          watchSlidesVisibility: true,
+          pagination: {
+            el: '.pagination',
+            type: 'fraction',
+            renderFraction: function (currentClass, totalClass) {
+                return '<span class="' + currentClass + '"></span>' +
+                       '<span> of </span>' +
+                       '<span class="' + totalClass + '"></span>';
+            },
+          },
+          navigation: {
+            nextEl: '.button-next',
+            prevEl: '.button-prev',
+          },
+          on: {
+              slideChangeTransitionEnd: function () {
+                console.log('swiper initialized');
+                $('.swiper-slide #sliderProgress').width(0);
+                $('.swiper-slide-active #sliderProgress').width(50);
+              },
+            },
         });
+
+        
 
         $(".homepage--stories__each").hover(function() {
             $(this).addClass("hover");
@@ -152,9 +176,11 @@
           grabCursor: true,
           centeredSlides: true,
           slidesPerView: "auto",
-          prevButton: ".button-prev",
-          nextButton: ".button-next",
-          coverflow: {
+          navigation: {
+            nextEl: '.button-next',
+            prevEl: '.button-prev',
+          },
+          coverflowEffect: {
             rotate: 0,
             stretch: 0,
             depth: 200,

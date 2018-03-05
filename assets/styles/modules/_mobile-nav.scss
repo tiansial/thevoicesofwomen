@@ -2,20 +2,21 @@
   position: fixed;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   z-index: $above-content;
   width: 100%;
-  padding: 20px;
+  height: $mobileNavHeight;
+  padding: 0 20px;
   background-color: $color-brown;
   top: 0;
   transition: top 0.2s ease-in-out;
-  box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.34);
 
   @include bpm() {
     display: none;
   }
 
-  &.nav-up {
-    top: -77px;
+  &.nav-down {
+    box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.34);
   }
 
   .logo {

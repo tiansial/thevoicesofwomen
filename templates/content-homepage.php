@@ -1,27 +1,61 @@
 <?php
 
+// Raquel Story
 $myStory = get_post(75); 
 $myStoryExcerpt = $myStory->post_excerpt;
 $myStoryUrl = get_permalink($myStory);
 $myStoryImage = get_the_post_thumbnail($myStory->ID, 'medium');
+
+// Slider Posts
+
+$the_query = new WP_Query( array(
+    'post_type' => array('any'),
+    'post__in' => array( 91, 27, 48)
+) );
 ?>
 
-<section class="homepage--hero">
-    <div class="container">
-        <div class="swiper-container" id="homeHero">
-            <div class="swiper-wrapper">
-                <div class="homepage--hero__slide swiper-slide">
-                    <img src="<?= get_template_directory_uri(); ?>/dist/images/background.jpg" alt="">
+<div class="container">
+    <?php 
+    // The Loop
+    if ( $the_query->have_posts() ) { ?>
+        <section class="homepage--hero">
+            <div class="swiper-container" id="homeHero">
+                <div class="swiper-wrapper">
+                    <?php while ( $the_query->have_posts() ) {
+                        $the_query->the_post(); ?>
+                        <div class="homepage--hero__slide swiper-slide">
+                            <div class="heroSlide--content">
+                                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                <span id="sliderProgress"></span>
+                                <p><?php echo wp_trim_words( get_the_content(), 25, '...' ); ?></p>
+                            </div>
+                            <div class="heroSlide--photo">
+                                <?php the_post_thumbnail(); ?>
+                            </div>
+                        </div>
+                    <?php } ?>
                 </div>
-                <div class="homepage--hero__slide swiper-slide">
-                    <img src="<?= get_template_directory_uri(); ?>/dist/images/background2.jpg" alt="">
+                
+                <div class="heroSlide--navigation">
+                    <div class="button-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 30" x="0px" y="0px">
+                          <path fill="#ffffff" d="M7.708 20.971l8.485-8.486-8.485-8.485-0.708 0.707 7.778 7.778-7.778 7.779z"/>
+                          </svg>
+                    </div>
+                    <div class="button-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 30" x="0px" y="0px">
+                          <path fill="#ffffff" d="M7.708 20.971l8.485-8.486-8.485-8.485-0.708 0.707 7.778 7.778-7.778 7.779z"/>
+                          </svg>
+                    </div>
                 </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination swiper-pagination-white"></div>
             </div>
-        </div>
-    </div>
-</section>
+            <div class="pagination"></div>
+            <span class="scroll-line init"></span>
+        </section>
+        <?php wp_reset_postdata();
+    } 
+    ?>
+</div>
 <section class="homepage--featured">
     <div class="container">
         <div class="row no-gutters">
@@ -72,5 +106,5 @@ $myStoryImage = get_the_post_thumbnail($myStory->ID, 'medium');
     </div>
 </section>
 <section class="homepage--moreStories">
-    <a class="btn btn-yellow" href="<?php echo get_post_type_archive_link( 'stories' ); ?>"><?php _e('All Stories.', 'thevoicesofwomen') ?></a>
+    <a class="btn btn-yellow" href="<?php echo get_post_type_archive_link( 'stories' ); ?>"><?php _e('All Stories', 'thevoicesofwomen') ?></a>
 </section>
