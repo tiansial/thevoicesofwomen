@@ -4,7 +4,7 @@
 $myStory = get_post(48); 
 $myStoryExcerpt = $myStory->post_excerpt;
 $myStoryUrl = get_permalink($myStory);
-$myStoryImage = get_the_post_thumbnail($myStory->ID, 'medium');
+$myStoryImage = get_the_post_thumbnail($myStory->ID, 'original');
 
 // Slider Posts
 $sliderPosts = get_field('content');

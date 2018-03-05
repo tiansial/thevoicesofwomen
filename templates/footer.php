@@ -26,9 +26,9 @@
             <div class="col-xs-12 col-md-3 footer-col">
                 <h5><?php _e("Follow us", "thevoicesofwomen"); ?></h5>
                 <ul>
-                    <li><a href="https://www.facebook.com/VoicesofWomen1/"><?php _e('Facebook', 'voicesofwomen'); ?></a></li>
-                    <li><a href="https://www.instagram.com/voicesofwomen/"><?php _e('Instagram', 'voicesofwomen'); ?></a></li>
-                    <li><a href="#"><?php _e('Twitter', 'voicesofwomen'); ?></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/VoicesofWomen1/"><?php _e('Facebook', 'voicesofwomen'); ?></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/voicesofwomen/"><?php _e('Instagram', 'voicesofwomen'); ?></a></li>
+                    <li><a target="_blank" href="https://twitter.com/voicesofwomen1"><?php _e('Twitter', 'voicesofwomen'); ?></a></li>
                 </ul>
             </div>
             <div class="col-xs-12 col-md-3 footer-col">

@@ -15,7 +15,7 @@ body:not(.home) {
 }
 
 .global-wrapper {
-  padding-top: calc(#{$mobileNavHeight} + 10px);
+  padding-top: $mobileNavHeight;
 
   @include bps() {
     transition: transform 0.68s cubic-bezier(0.64, 0.045, 0.35, 1);

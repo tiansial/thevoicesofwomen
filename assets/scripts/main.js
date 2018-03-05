@@ -21,6 +21,7 @@
         var _body = document.querySelector('body'),
             mobileMenuToggle = document.querySelector('.mobile-nav__toggle'),
             mobileMenu = document.querySelector('.mobile-navigation'),
+            mobileNav = $('.mobile-nav'),
             globalWrapper = document.querySelector('.global-wrapper');
 
         function OnTransitionEnd() {
@@ -65,6 +66,7 @@
         var lastScrollTop = 0;
         var delta = 5;
         var navbarHeight = $(".mobile-nav").outerHeight();
+        var navbarTopDistance = mobileNav.offset().top;
 
         function hasScrolled() {
           var st = $(this).scrollTop();
@@ -97,6 +99,12 @@
 
         $(window).scroll(function(event) {
           didScroll = true;
+
+          if ($(window).scrollTop() > navbarTopDistance) {
+              mobileNav.removeClass("no-box-shadow");
+           } else {
+              mobileNav.addClass("no-box-shadow");
+           }
         });
 
         setInterval(function() {

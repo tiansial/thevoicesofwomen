@@ -9,7 +9,12 @@
   padding: 0 20px;
   background-color: $color-brown;
   top: 0;
-  transition: top 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
+  &.no-box-shadow {
+    box-shadow: none !important;
+    transition: all 0.3s ease-in-out;
+  }
 
   @include bpm() {
     display: none;
@@ -29,7 +34,7 @@
     color: white;
     text-transform: uppercase;
     font-size: 10px;
-    font-weight: 700;
+    font-weight: 100;
 
 
     svg {
