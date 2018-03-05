@@ -22,8 +22,8 @@
         </a>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-md-4 footer-col">
+        <div class="row justify-content-center">
+            <div class="col-xs-12 col-md-3 footer-col">
                 <h5><?php _e("Follow us", "thevoicesofwomen"); ?></h5>
                 <ul>
                     <li><a href="https://www.facebook.com/VoicesofWomen1/"><?php _e('Facebook', 'voicesofwomen'); ?></a></li>
@@ -31,7 +31,7 @@
                     <li><a href="#"><?php _e('Twitter', 'voicesofwomen'); ?></a></li>
                 </ul>
             </div>
-            <div class="col-xs-12 col-md-4 footer-col">
+            <div class="col-xs-12 col-md-3 footer-col">
                 <h5><?php _e("About the Project", "thevoicesofwomen"); ?></h5>
                 <ul>
                     <li><a href="<?php echo get_the_permalink(48); ?>"><?php echo get_the_title(48); ?></a></li>
@@ -39,19 +39,12 @@
                     <li><a href="<?php echo get_the_permalink(75); ?>"><?php echo get_the_title(75); ?></a></li>
                 </ul>
             </div>
-            <div class="col-xs-12 col-md-4 footer-col">
-                <h5><?php _e("Supporting", "thevoicesofwomen"); ?></h5>
-                <ul>
-                    <li><a href="#"><?php _e("Partnerships", "voicesofwomen"); ?></a></li>
-                    <li><a href="#"><?php _e("Sponsors", "voicesofwomen"); ?></a></li>
-                </ul>
-            </div>
         </div>
     </div>
     <div class="container">
         <div class="terms">
             <ul>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="<?php echo get_the_permalink(124) ?>">Privacy Policy</a></li>
                 <li><a href="<?php echo get_permalink(115); ?>">Terms of Use</a></li>
             </ul>
         </div>

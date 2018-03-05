@@ -146,8 +146,6 @@
             },
         });
 
-        
-
         $(".homepage--stories__each").hover(function() {
             $(this).addClass("hover");
             $(".homepage--stories__each").not(this).each(function(){

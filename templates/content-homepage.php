@@ -1,7 +1,7 @@
 <?php
 
 // Raquel Story
-$myStory = get_post(75); 
+$myStory = get_post(48); 
 $myStoryExcerpt = $myStory->post_excerpt;
 $myStoryUrl = get_permalink($myStory);
 $myStoryImage = get_the_post_thumbnail($myStory->ID, 'medium');
