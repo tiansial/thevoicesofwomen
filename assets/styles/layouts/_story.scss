@@ -24,15 +24,24 @@
     }
 
     .vert-line {
+      position: relative;
       display: block;
       margin: 0 auto;
       margin-bottom: 10px;
-      height: 0;
+      height: 35px;
       width: 1px;
-      background-color: $color-white;
-      animation: vertline 1s forwards;
-      animation-timing-function: cubic-bezier(0.21, 0.61, 0.35, 1);
-      animation-delay: 1.2s;
+      
+      &::after {
+        position: absolute;
+        content:'';
+        width: 100%;
+        left: 0;
+        top: 0;
+        animation: vertline 1s forwards;
+        animation-timing-function: cubic-bezier(0.21, 0.61, 0.35, 1);
+        animation-delay: 1.2s;
+        background-color: $color-white;
+      }
     }
   }
 
