@@ -2,6 +2,27 @@
   #mc-embedded-subscribe-form {
     text-align: center;
 
+    .mc-field-group {
+      label {
+        display: block;
+        font-family: $font-sans;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+        opacity: 0.5;
+        margin-bottom: 5px;
+        margin-top: 10px;
+      }
+
+      select {
+        border-radius: 0;
+        -webkit-appearance: none;
+        color: white;
+        text-align: center;
+        text-align-last:center;
+      }
+    }
+
     .indicates-required {
       text-transform: uppercase;
       letter-spacing: 1px;
