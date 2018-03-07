@@ -16,10 +16,15 @@
 
       select {
         border-radius: 0;
+        background: transparent;
         -webkit-appearance: none;
-        color: white;
+        color: rgba(white, 0.5);
         text-align: center;
         text-align-last:center;
+
+        option {
+          color: $color-brown;
+        }
       }
     }
 

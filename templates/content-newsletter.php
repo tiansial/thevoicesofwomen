@@ -18,7 +18,7 @@
                 <div class="mc-field-group">
                     <label for="mce-COUNTRY">Country </label>
                     <select name="COUNTRY" class="newsletter-input" id="mce-COUNTRY">
-                        <option disabled="" selected="" value="Pick your country please">Pick your country please</option>
+                        <option class="option-disabled" disabled="" selected="" value="Pick your country please">Pick your country please</option>
                         <option value="Aaland Islands">Aaland Islands</option>
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
